@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Expidian\GlobalBundle\ExpidianGlobalBundle(),
             new Expidian\UsuariosBundle\ExpidianUsuariosBundle(),
+            new Expidian\ProcesosBundle\ExpidianProcesosBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

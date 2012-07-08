@@ -12,6 +12,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Procesos
 {
+    
+    protected $id;
+    
+    
     /**
      * @var integer $idProceso
      *
@@ -43,6 +47,11 @@ class Procesos
      */
     private $nroConsecutivoProceso;
 
+	
+	public function getId()
+	{
+		return $this->idProceso;
+	}
 
 
     /**
