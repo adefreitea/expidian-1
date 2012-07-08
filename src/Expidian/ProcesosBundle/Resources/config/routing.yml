@@ -10,8 +10,8 @@ ExpProcesosNew:
     pattern:  /procesos/nuevo
     defaults: { _controller: ExpidianProcesosBundle:Procesos:new}
     
-ExpUsuariosEdit:
-    pattern:  /usuarios/edit/{id_proceso}
+ExpProcesosEdit:
+    pattern:  /procesos/edit/{id_proceso}
     defaults: { _controller: ExpidianProcesosBundle:Procesos:edit}
     
 ExpProcesosDelete:
