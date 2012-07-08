@@ -39,7 +39,7 @@ class ProcesosController extends Controller {
     
     }
     
-    public function deleteAction($id_usuario) 
+    public function deleteAction() 
     {
         
     }
