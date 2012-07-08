@@ -7,7 +7,7 @@
 -- Started on 2012-07-06 15:11:40
 
 SET statement_timeout = 0;
-SET client_encoding = 'WIN1252';
+SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
