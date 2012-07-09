@@ -1,6 +1,27 @@
-ExpInicio:
-    pattern:  /inicio
-    defaults: { _controller: ExpidianGlobalBundle:Default:index }
 ExpEntrada:
     pattern:  /
     defaults: { _controller: ExpidianGlobalBundle:Default:index }
+
+ExpInicio:
+    pattern:  /inicio/
+    defaults: { _controller: ExpidianGlobalBundle:Default:index }
+    
+ExpOrganismosList:
+    pattern:  /organismos/
+    defaults: { _controller: ExpidianGlobalBundle:Organismos:list }
+    
+ExpOrganismosAjaxList:
+    pattern:  /organismos/ajax/lista/{page}
+    defaults: { _controller: ExpidianGlobalBundle:Organismos:ajaxList, page: 1 }
+
+ExpOrganismosNew:
+    pattern:  /organismos/nuevo/
+    defaults: { _controller: ExpidianGlobalBundle:Organismos:new }
+    
+ExpOrganismosEdit:
+    pattern:  /organismos/edit/{id_organismo}
+    defaults: { _controller: ExpidianGlobalBundle:Organismos:edit }
+ 
+ExpOrganismosDelete:
+    pattern:  /organismos/eliminar/{id_organismo}
+    defaults: { _controller: ExpidianGlobalBundle:Organismos:delete}

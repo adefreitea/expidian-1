@@ -19,6 +19,6 @@ class PersonasType extends AbstractType
            
     public function getName()
     {
-        return 'procesostype';
+        return 'procesotype';
     }
 }

@@ -1,17 +1,16 @@
 {% extends '::base.html.twig' %}
 
 {% block javascripts %}
-    <script language="javascript" type="text/javascript" src="{{ asset('bundles/expidian/js/validate/jquery.validate.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('bundles/expidian/js/sinner_grid/sinner_grid.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('bundles/expidian/js/controladores/Usuarios/usuarios.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bundles/expidian/js/controladores/Organismos/organismos.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function (){
             
-            listar_usuarios("{{ path('ExpAjaxUsuariosList') }}");
+            listar_organismos("{{ path('ExpOrganismosAjaxList') }}");
                                     
-            $("#form_busqueda_usuario").submit(function(event){
+            $("#form_busqueda_organismo").submit(function(event){
                 event.preventDefault();
-                busqueda_usuarios("{{ path('ExpAjaxUsuariosList') }}");
+                busqueda_organismos("{{ path('ExpOrganismosAjaxList') }}");
             });
             
         });
@@ -21,14 +20,14 @@
 
 {% block maincontent %}
     <article id="buscador">
-        <div class="searchOptionsSector module_content" id="div_form_busqueda_usuario">
-            <form id="form_busqueda_usuario" name="form_busqueda_usuario" method="post">
+        <div class="searchOptionsSector module_content" id="div_form_busqueda_organismo">
+            <form id="form_busqueda_organismo" name="form_busqueda_organismo" method="post">
                 <fieldset style="width: 101%;"> 
                     <select name="criteria_box" id="criteria_box" type="text" style="width:20%;" class="searchBox" >
                         <option value=""> - - - </option>
-                        <option value="nombre">Nombre de Usuario</option>
-                        <option value="usuario">Usuario</option>
-                        <option value="perfil">Perfil</option>
+                        <option value="nombre">Nombre de Organismo</option>
+                        <option value="sector">Sector</option>
+                        <option value="rif">RIF</option>
                     </select>
                     <input name="search_box" id="search_box" type="text" style="width:67%;" class="searchBox" />
                     <input name="searchButton" type="submit" value="Buscar" style="margin-left:10px;width: 6.5%" />
@@ -39,11 +38,11 @@
     <article class="module width_full">
         <header>
             <h3>
-                <span>Lista de Usuarios del Sistema</span>
+                <span>Lista de Organismos</span>
             </h3>
         </header>
-        <div class="module_content" id="div_lista_usuarios" style="min-height: 412px;">
-            <form name="form_list_usuarios" id="form_list_usuarios">
+        <div class="module_content" id="div_lista_organismos" style="min-height: 412px;">
+            <form name="form_list_organismos" id="form_list_organismos">
                 <input type="hidden" value="{{rows}}" id="rows" name="rows" />
                 <input type="hidden" value="{{searchField}}" id="searchFieldf" name="searchFieldf" />
                 <input type="hidden" value="{{searchOper}}" id="searchOperf" name="searchOperf" />
